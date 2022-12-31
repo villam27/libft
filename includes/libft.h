@@ -6,7 +6,7 @@
 /*   By: alboudje <alboudje@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:27:12 by alboudje          #+#    #+#             */
-/*   Updated: 2022/12/31 13:54:11 by alboudje         ###   ########.fr       */
+/*   Updated: 2022/12/31 14:17:46 by alboudje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,31 @@ int		ft_isascii(int c);
 *	STRINGS
 */
 size_t	ft_strlen(const char *s);
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strcat(char *dst, const char *src);
+char	*ft_strncat(char *dst, const char *src, size_t n);
+
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strstr(const char *haystack, const char *needle);
+
+char	*ft_substr(char const *s, size_t start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strdup(const char *src);
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2);
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /*
 *	MEMORY
@@ -63,6 +76,8 @@ char	*ft_itoa(int n);
 int		ft_atoi(const char *str);
 
 char	**ft_split(char const *s, char c);
+char	**ft_rsplit(char const *s, char c, char r);
+char	**ft_splits(char const *s, char *str);
 
 /*
 *	PRINT
